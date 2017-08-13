@@ -1,0 +1,10 @@
+<div class="container white">
+  <div *ngFor="let channelGroup of channelGroups">
+    <div class="row blue lighten-5">
+      <div class="col l12">&nbsp;<br/><b>{{getFormattedDate(channelGroup.group)}}</b></div>
+    </div>
+    <channel *ngFor="let channel of channelGroup.channels"
+      [channel]="channel">
+    </channel>
+  </div>
+</div>
